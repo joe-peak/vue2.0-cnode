@@ -1,23 +1,13 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-      <br>
-      <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
-  </div>
+  <header id="catogory">
+    <mt-navbar v-model="selected" >
+      <mt-tab-item style='font-size:60px;' id="1">全部</mt-tab-item>
+      <mt-tab-item id="2">精华</mt-tab-item>
+      <mt-tab-item id="3">分享</mt-tab-item>
+      <mt-tab-item id="4">问答</mt-tab-item>
+      <mt-tab-item id="5">招聘</mt-tab-item>
+    </mt-navbar>
+  </header>
 </template>
 
 <script>
@@ -25,7 +15,7 @@ export default {
   name: 'hello',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      selected: 3
     }
   }
 }
@@ -49,5 +39,13 @@ li {
 
 a {
   color: #42b983;
+}
+
+#catogory{
+  border:1px solid red;
+}
+#catogory .mint-tab-item-label
+{
+  font-size: 66px;
 }
 </style>
